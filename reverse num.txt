@@ -1,0 +1,25 @@
+int main()
+{
+
+int x, result, next;
+	printf("Enter The number to revers=");
+	scanf_s("%d", &x); //user is entering 5 digit number (x = 12345)
+	//5th
+	result = x % 10; //(1234.5)
+	result = result * 10; //(12345)
+
+	//4th
+	next = (x / 10) % 10; 
+	result = (result + next) * 10; 
+	//3rd
+	next = (x / 100) % 10; 
+	result = (result + next) * 10; 
+	//2nd
+	next = (x / 1000) % 10; 
+	result = (result + next) * 10; 
+	//1st
+	next = (x / 10000) % 10; 
+	result = result + next;
+	printf("%d", result);
+	
+	}
